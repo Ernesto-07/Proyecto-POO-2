@@ -5,9 +5,11 @@ Proyecto de uso de clases y objetos. En este proyecto de la materia de programac
 # Contexto:
 Este proyecto es sobre un taller mecánico. La idea es tener clases básicas que representen cosas del taller: un vehículo, un mecánico y un servicio. Cada clase guarda información sencilla y puede mostrarla en pantalla.
 
-# UML
+# UML y su relacion al problema 
 Se sube un archivo png con la imagen del UML que disene, que involucre un numero de clases que el profesor pide. 
 En este UML de clases se observa como inclui herencia, usando protected en los atributos. Tambien se incluye composicion dentro de este diagrama, lo que lo hace un diagrama completo. Se podria incluir facilmente agregacion tambien pero sera una modificacion que se hara despues.
+En el uml en la parte izquierda, se observa como de persona se hereda a mecanico y a cliente, los cuales daran su informacion mas adelante. Esto para resolver el problema del orden en que llegan los clientes y que mecanico hara el trabajo. En la parte derecha vemos como de taller se compone servicio y vehiculo, que sirve para los registros de los autos que llegan y los 
+servicios que se aplicaran. 
 
 # Cosas que harian que el proyecto deje de funcionar 
 Por ahora, simplemente que el UML tenga informacion incompleta o insuficiente, o mover cosas que no se deberian de cambiar. 
