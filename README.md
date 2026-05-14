@@ -7,6 +7,7 @@ Este proyecto es sobre un taller mecánico. La idea es tener clases básicas que
 
 # UML
 Se sube un archivo png con la imagen del UML que disene, que involucre un numero de clases que el profesor pide. 
+En este UML de clases se observa como inclui herencia, usando protected en los atributos. Tambien se incluye composicion dentro de este diagrama, lo que lo hace un diagrama completo. Se podria incluir facilmente agregacion tambien pero sera una modificacion que se hara despues.
 
 # Cosas que harian que el proyecto deje de funcionar 
 Por ahora, simplemente que el UML tenga informacion incompleta o insuficiente, o mover cosas que no se deberian de cambiar. 
