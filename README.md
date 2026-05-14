@@ -12,4 +12,4 @@ Se sube un archivo png con la imagen del UML que disene, que involucre un numero
 Por ahora, simplemente que el UML tenga informacion incompleta o insuficiente, o mover cosas que no se deberian de cambiar. 
 Mas adelante en el codigo, cosas que podrian hacer tronar este proyecto son cosas como: Al usuario poner un dato diferente al pedido en las opciones del menu lo sacara inmediatamente del programa.
 
-Si el usuario escribe un tipo de dato no esperado (por ejemplo en edad o costo), simplemente sacara al usuario del programa.
+Si el usuario escribe un tipo de dato no esperado, simplemente sacara al usuario del programa.
