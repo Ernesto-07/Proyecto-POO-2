@@ -25,12 +25,17 @@ Después, muestra esos datos en consola y también imprime mensajes como la desc
 # Menu desplegado 
 El menu tiene 6 opciones a considerar:
 
-Opcion de salir del programa al haber pasado por las demas opciones, o si el usuario quiere salir en cualquier momento.
-Opcion de agregar el vehiculo
-Opcion de agregar el servicio que se le dara al vehiculo
-Opcion de mostrar lo que lleva por ahora el taller (los vehiculos con sus respectivos servicios)
-Opcion de agregar al cliente con su nombre, apellido, edad, etc.
-Opcion de agregar al mecanico que dara el servicio.
+0. Opcion de salir del programa al haber pasado por las demas opciones, o si el usuario quiere salir en cualquier momento.
+
+1. Opcion de agregar el vehiculo
+
+2. Opcion de agregar el servicio que se le dara al vehiculo
+
+3. Opcion de mostrar lo que lleva por ahora el taller (los vehiculos con sus respectivos servicios)
+
+4. Opcion de agregar al cliente con su nombre, apellido, edad, etc.
+
+5. Opcion de agregar al mecanico que dara el servicio.
 
 # UML y su relacion al problema 
 Se sube un archivo png con la imagen del UML que disene, que involucre un numero de clases que el profesor pide. 
