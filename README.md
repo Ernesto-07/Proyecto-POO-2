@@ -22,6 +22,16 @@ y un taller que se conectara por composicion a servicio y vehiculo.
 
 Después, muestra esos datos en consola y también imprime mensajes como la descripción del vehículo, una bienvenida del mecánico y el costo del servicio.
 
+# Menu desplegado 
+El menu tiene 6 opciones a considerar:
+
+Opcion de salir del programa al haber pasado por las demas opciones, o si el usuario quiere salir en cualquier momento.
+Opcion de agregar el vehiculo
+Opcion de agregar el servicio que se le dara al vehiculo
+Opcion de mostrar lo que lleva por ahora el taller (los vehiculos con sus respectivos servicios)
+Opcion de agregar al cliente con su nombre, apellido, edad, etc.
+Opcion de agregar al mecanico que dara el servicio.
+
 # UML y su relacion al problema 
 Se sube un archivo png con la imagen del UML que disene, que involucre un numero de clases que el profesor pide. 
 En este UML de clases se observa como inclui herencia, usando protected en los atributos. Tambien se incluye composicion dentro de este diagrama, lo que lo hace un diagrama completo. Se podria incluir facilmente agregacion tambien pero sera una modificacion que se hara despues.
