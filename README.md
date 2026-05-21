@@ -5,7 +5,22 @@ Proyecto de uso de clases y objetos. En este proyecto de la materia de programac
 # Contexto:
 Este proyecto es sobre un taller mecánico. La idea es tener clases básicas que representen cosas del taller: un vehículo, un mecánico y un servicio. Cada clase guarda información sencilla y puede mostrarla en pantalla.
 
-# Codigo
+# Codigo y su funcionalidad 
+El programa crea:
+
+una persona que va a heredar a mecanico y cliente,
+
+un mecánico con su nombre, apellido, edad, experiencia,
+
+un cliente con su nombre, apellido, edad, años de uso,
+
+un vehículo con marca y modelo,
+
+un servicio con su tipo y costo,
+
+y un taller que se conectara por composicion a servicio y vehiculo.
+
+Después, muestra esos datos en consola y también imprime mensajes como la descripción del vehículo, una bienvenida del mecánico y el costo del servicio.
 
 # UML y su relacion al problema 
 Se sube un archivo png con la imagen del UML que disene, que involucre un numero de clases que el profesor pide. 
