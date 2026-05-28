@@ -5,6 +5,11 @@ Proyecto de uso de clases y objetos. En este proyecto de la materia de programac
 # Contexto:
 Este proyecto es sobre un taller mecánico. La idea es tener clases básicas que representen cosas del taller: un vehículo, un mecánico y un servicio. Cada clase guarda información sencilla y puede mostrarla en pantalla.
 
+# Avance 3
+
+En este tercer avance se agrego polimorfismo. Se crea un virtual void describir() en la clase padre, que es persona. Luego se usa en las clases hijas, mecanico y cliente, seguido de un override que indica que se heredo de la clase padre y el cual es necesario para evitar errores en el programa. Tambien se creo una relacion de agregacion entre taller y persona, en la clase taller se creo un arreglo de apuntadores a la clase padre (persona*), que puede ser tanto mecanico como cliente, y se le determina un maximo de 10 al inicio en Persona* listaPersonas[MAX_PERSONAS]; . Tambien se recibe en los metodos el agregarPersona(Persona& p), que guarda la direccion de la memoria y no crea copias. En esta parte de taller tambien se agrego un destrcutor para lo que vamos a crear dentro del main que se guarda directo en el heap gracias al "new" que use. 
+En el main se crearon nuevas formas de crear clientes y mecanicos usando el new, poniendo Persona* nuevoCliente/mecanico = new Cliente/mecanico(...). Seguido del t1.agregarPersona(*nuevoCliente/mecanico), aqui el apuntador funciona para no agarrar la direccion que ya teniamos indicada para el objeto, sino que agarre el objeto en si y lo jale.
+
 # Codigo y su funcionalidad 
 El programa crea:
 
