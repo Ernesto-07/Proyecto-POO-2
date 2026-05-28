@@ -48,6 +48,18 @@ En este UML de clases se observa como inclui herencia, usando protected en los a
 En el uml en la parte izquierda, se observa como de persona se hereda a mecanico y a cliente, los cuales daran su informacion mas adelante. Esto para resolver el problema del orden en que llegan los clientes y que mecanico hara el trabajo. En la parte derecha vemos como de taller se compone servicio y vehiculo, que sirve para los registros de los autos que llegan y los 
 servicios que se aplicaran. 
 
+# Consideraciones
+
+Corre en consola.
+
+Está hecho en C++ normal.
+
+1. Entrar a carpeta donde se encuentre el "mainpoo.cpp" y donde se encuentren los demas .h
+
+2. Compilar con: "g++ mainpoo.cpp -o taller". Esto genera el archivo ejecutable
+
+3.  Ejecute el siguiente comando: taller
+
 # Cosas que harian que el proyecto deje de funcionar 
 Al usuario poner un dato diferente al pedido en las opciones del menu lo sacara inmediatamente del programa.
 
