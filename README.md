@@ -13,7 +13,7 @@ En el main se crearon nuevas formas de crear clientes y mecanicos usando el new,
 # Codigo y su funcionalidad 
 El programa crea:
 
-una persona que va a heredar a mecanico y cliente,
+una persona que va a heredar a mecanico y cliente, y aqui es donde se aplica el polimorfismo, usando virtual en la funcion de describir(),
 
 un mecánico con su nombre, apellido, edad, experiencia,
 
@@ -23,9 +23,9 @@ un vehículo con marca y modelo,
 
 un servicio con su tipo y costo,
 
-y un taller que se conectara por composicion a servicio y vehiculo.
+y un taller que se conectara por composicion a servicio y vehiculo, y por agregacion hacia persona.
 
-Después, muestra esos datos en consola y también imprime mensajes como la descripción del vehículo, una bienvenida del mecánico y el costo del servicio.
+Después, muestra esos datos en consola y también imprime mensajes como la descripción del vehículo, del mecánico y el costo del servicio.
 
 # Menu desplegado 
 El menu tiene 6 opciones a considerar:
