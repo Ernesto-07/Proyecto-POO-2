@@ -41,8 +41,8 @@ void menu() {
 
 int main() {
 
-    //Se crea el objeto Taller
-    Taller t1("Taller Don Paco");
+    //Se crea el objeto Taller y le pongo mi nombre
+    Taller t1("Taller Erni");
 
     //Se define un mecánico fijo con datos ya establecidos
     Mecanico mecanico1;  
@@ -117,7 +117,8 @@ int main() {
                 continue;
             }
             Persona* nuevoCliente = new Cliente(nombre, apellido, edad, anosUso, cantidad);
-            t1.agregarPersona(*nuevoCliente);
+            t1.agregarPersona(nuevoCliente);
+            nuevoCliente->describir();
         }
         else if(opcion == 5) {
             // Caso 5: Agregar mecánico con datos ingresados por el usuario
@@ -151,7 +152,8 @@ int main() {
             }
 
             Persona* nuevoMecanico = new Mecanico(nombre, apellido, edad, experiencia, cantidad);
-            t1.agregarPersona(*nuevoMecanico);
+            t1.agregarPersona(nuevoMecanico);
+            nuevoMecanico->describir();
             }
         else if(opcion == 0) {
             //Caso 0: Salir del programa
