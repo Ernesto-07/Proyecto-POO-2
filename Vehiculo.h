@@ -10,7 +10,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-
+ 
 class Vehiculo {
 private:
     //DECLARACION DE VARIABLES
@@ -87,7 +87,7 @@ string Vehiculo :: getModelo() {
  * @return 
 */      
 void Vehiculo :: describir() {
-        cout << "Vehiculo: " << marca << " " << modelo << endl;
+        cout << "   Vehiculo: " << marca << " " << modelo << endl;
     }
 
 #endif
