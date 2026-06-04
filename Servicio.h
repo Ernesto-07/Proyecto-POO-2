@@ -10,7 +10,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-
+ 
 class Servicio {
 private:
     string tipo;   // tipo de servicio 
@@ -86,7 +86,7 @@ float Servicio :: getCosto() {
  * @return 
 */      
 void Servicio :: describir(){
-        cout << "Servicio: " << tipo << " | Costo: $" << costo << endl;
+        cout << "   Servicio: " << tipo << " | Costo: $" << costo << endl;
     }
 
 #endif
