@@ -19,7 +19,7 @@ private:
 public:
     // Constructor por defecto con datos ya definidos
     Mecanico();
-
+ 
     // Constructor con parámetros
     Mecanico(string n, string a, float e, float exp, float c);
 
@@ -92,13 +92,13 @@ void Mecanico :: setExperiencia(float exp) {
 }
 
 /**
- * void bienvenida
+ * void describir
  * no regresa nada 
  * @param
  * @return 
 */      
 void Mecanico :: describir (){
-        cout << "Mecanico: " << nombre << " " << apellido
+        cout << "\n     Mecanico: " << nombre << " " << apellido
              << " | Edad: " << edad
              << " | Experiencia: " << experiencia << " anos"
              << " | Servicios realizados: " << cantidad << endl;
