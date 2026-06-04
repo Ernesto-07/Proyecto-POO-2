@@ -20,7 +20,7 @@ private:
 
 public:
     //DECLARACION DE LOS METODOS QUE TENDRA EL OBJETO
-
+ 
     Cliente();
     
     // Constructor con parametros: inicializa atributos de Persona y Cliente
@@ -99,23 +99,23 @@ float Cliente :: getCantidad(){
  * @return 
 */      
 void Cliente :: describir(){
-        cout << "Cliente: " << nombre << " " << apellido << endl;
+        cout << "\n     Cliente: " << nombre << " " << apellido << endl;
             if(edad>0){
-                cout << " | Edad: " << edad << endl;
+                cout << "       | Edad: " << edad << endl;
             }
             else{
                 cout << "Edad no valida" << endl;
             }
              
             if(anosUso > 0){
-                cout << " | Anos de uso: " << anosUso << endl; //años(se puso anos por impresion)
+                cout << "       | Anos de uso: " << anosUso << endl; //años(se puso anos por impresion)
             }
             else{
                 cout << "Numero no valido" << endl;
             }
 
             if(cantidad > 0){
-                cout << " | Servicios realizados: " << cantidad << endl;
+                cout << "       | Servicios realizados: " << cantidad << endl;
             }
             else{
                 cout << "Numero no valido" << endl;
