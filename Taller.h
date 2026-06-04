@@ -16,7 +16,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
-
+ 
 class Taller {
 private:
     string nombre; // nombre del taller
@@ -38,7 +38,7 @@ public:
     Taller(string n);
 
     ~Taller(); 
-    void agregarPersona(Persona& p);
+    void agregarPersona(Persona* p);
 
     // Método para agregar un vehículo al taller
     void crearVehiculo(string marca, string modelo);
@@ -80,13 +80,15 @@ Taller :: ~Taller() {
         delete listaPersonas[i]; 
     }
 }
-
-void Taller::agregarPersona(Persona& p) {
-    if (totalPersonas < 10) {
-        listaPersonas[totalPersonas] = &p; // Guardamos la direccion de memoria
+/* Se usa agregarPersona como agregacion
+*  ya que se crea el objeto fuera de esta clase y se pasa como referencia
+*/ 
+void Taller::agregarPersona(Persona* p) {
+    if (totalPersonas < MAX_PERSONAS) {
+        listaPersonas[totalPersonas] = p; // Guardamos la direccion de memoria
         totalPersonas++;
     } else {
-        cout << "No se pueden registrar mas personas." << endl;
+        cout << "\nNo se pueden registrar mas personas." << endl;
     }
 }
 
@@ -100,25 +102,21 @@ void Taller :: crearVehiculo(string marca, string modelo) {
             vehiculos[totalVehiculos] = Vehiculo(marca, modelo);
             totalVehiculos++;
         } else {
-            cout << "No se pueden agregar mas vehiculos." << endl;
+            cout << "\nNo se pueden agregar mas vehiculos." << endl;
         }
     }
 
 void Taller :: crearServicio(string tipo, float costo) {
         if (totalServicios < MAX) {
-            servicios[totalServicios] =  Servicio(tipo, costo);;
+            servicios[totalServicios] =  Servicio(tipo, costo);
             totalServicios++;
         } else {
-            cout << "No se pueden agregar más servicios." << endl;
+            cout << "\nNo se pueden agregar más servicios." << endl;
         }
     }
 
 void Taller :: describir(){
         
-        cout << "\nPersonas registradas:" << endl;
-        for (int i = 0; i < totalPersonas; i++) {
-            listaPersonas[i]->describir(); // Usar flechita (->) en lugar de punto (.)
-        }
         cout << "\n===== Estado del Taller =====" << endl;
         cout << "Taller: " << nombre << endl;
 
@@ -138,6 +136,11 @@ void Taller :: describir(){
             for (int i = 0; i < totalServicios; i++) {
                 servicios[i].describir();
             }
+        }
+
+        cout << "\nPersonas registradas:" << endl;
+        for (int i = 0; i < totalPersonas; i++) {
+            listaPersonas[i]->describir(); // Usar flechita (->) en lugar de punto (.)
         }
     }
 
