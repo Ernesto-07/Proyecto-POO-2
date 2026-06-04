@@ -9,7 +9,7 @@
 
 #include <string>
 #include <iostream>
-using namespace std;
+using namespace std; 
 
 class Persona {
 protected: // protegido para que las subclases puedan acceder
@@ -24,6 +24,9 @@ public:
     // Constructor con parametros: inicializa con valores dados
     Persona(string n, string a, float e);
 
+    //Creo un destructor virtual para asegurar que se llame al destructor correcto de las subclases
+    virtual ~Persona();
+
     // Getters para acceder a los atributos
     string getNombre();
 
@@ -32,7 +35,7 @@ public:
     float getEdad();
 
     // Método común para mostrar información de la persona
-    virtual void describir();
+    virtual void describir() = 0;
 };
 
 
@@ -58,6 +61,9 @@ Persona :: Persona(string n, string a, float e){
         apellido = a;
         edad = e;
     }
+
+Persona :: ~Persona() {
+}
 
 
 /**
@@ -99,9 +105,6 @@ float Persona :: getEdad(){
  * @param
  * @return 
 */      
-void Persona :: describir(){
-        cout << "Persona: " << nombre << " " << apellido
-             << " | Edad: " << edad << endl;
-    }
+
 
 #endif
