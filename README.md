@@ -46,9 +46,8 @@ El menu tiene 6 opciones a considerar:
 
 # UML y su relacion al problema 
 Se sube un archivo png con la imagen del UML que disene, que involucre un numero de clases que el profesor pide. 
-En este UML de clases se observa como inclui herencia, usando protected en los atributos. Tambien se incluye composicion dentro de este diagrama, lo que lo hace un diagrama completo. Se podria incluir facilmente agregacion tambien pero sera una modificacion que se hara despues.
-En el uml en la parte izquierda, se observa como de persona se hereda a mecanico y a cliente, los cuales daran su informacion mas adelante. Esto para resolver el problema del orden en que llegan los clientes y que mecanico hara el trabajo. En la parte derecha vemos como de taller se compone servicio y vehiculo, que sirve para los registros de los autos que llegan y los 
-servicios que se aplicaran. 
+En este UML de clases se observa como inclui herencia, usando protected en los atributos. Tambien se incluye composicion dentro de este diagrama, lo que lo hace un diagrama completo. Se incluye agregacion tambien entre taller y persona, agregando personas al taller.
+En el uml en la parte izquierda, se observa como de persona se hereda a mecanico y a cliente, los cuales daran su informacion mas adelante. Esto para resolver el problema del orden en que llegan los clientes y que mecanico hara el trabajo. En la parte derecha vemos como de taller se compone servicio y vehiculo, que sirve para los registros de los autos que llegan y los servicios que se aplicaran. 
 
 # Uso de .clear y .fail
 Use cin.fail y cin.clear para que cuando se ingrese un valor menor a 0 en los casos donde se pide un numero entero, se imprima que se ingrese un valor entero mayor a 0 y se vuelve a mostrar el menu para darle al usuario la opcion de volverlo a escribir. El .fail me va a funcionar para revisar si la entrada fallo y el .clear funciona para limpiar al cin, que va a seguir recibiendo datos despues de ser limpiado. En resumen, el .fail me va a decir si hubo un error (en este caso que el entero sea menor a 0) y el .clear es para borrar el dato que se habia guardado en el cin, y que pueda seguir recibiendo datos. El continue; es como decir que vuelva al inicio del ciclo ootra vez y no siga con las lineas de codigo de abajo. Esto lo hice para que haya menos casos donde el codigo pueda tronar.
