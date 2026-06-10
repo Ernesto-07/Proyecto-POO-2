@@ -13,7 +13,7 @@ Finalmente se le agrego en la clase persona al metodo virtual void describir() =
 
 
 # Codigo y su funcionalidad 
-El programa crea:
+El programa contiene:
 
 una persona que va a heredar a mecanico y cliente, y aqui es donde se aplica el polimorfismo, usando virtual en la funcion de describir(),
 
