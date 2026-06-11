@@ -5,17 +5,10 @@ Proyecto de uso de clases y objetos. En este proyecto de la materia de programac
 # Contexto:
 Este proyecto es sobre un taller mecánico. La idea es tener clases básicas que representen cosas del taller: un vehículo, un mecánico y un servicio. Cada clase guarda información sencilla y puede mostrarla en pantalla.
 
-# Avance 3 y 4
-
-En este tercer avance se agrego polimorfismo. Se crea un virtual void describir() en la clase padre, que es persona. Luego se usa en las clases hijas, mecanico y cliente, seguido de un override que indica que se heredo de la clase padre y el cual es necesario para evitar errores en el programa. Tambien se creo una relacion de agregacion entre taller y persona, en la clase taller se creo un arreglo de apuntadores a la clase padre (persona*), que puede ser tanto mecanico como cliente, y se le determina un maximo de 10 al inicio en Persona* listaPersonas[MAX_PERSONAS]; . Tambien se recibe en los metodos el agregarPersona(Persona* p). En esta parte de taller tambien se agrego un destrcutor para lo que vamos a crear dentro del main que se guarda directo en el heap gracias al "new" que use. 
-En el main se crearon nuevas formas de crear clientes y mecanicos usando el new, poniendo Persona* nuevoCliente/mecanico = new Cliente/mecanico(...). Seguido del t1.agregarPersona(nuevoCliente/mecanico). nuevoMecanico->describir(); se incluyo para que cuando se agregara una persona (ya sea mecanico o cliente) se describiera inmediatamente despues de haber sido introducido los datos por el usuario.
-Finalmente se le agrego en la clase persona al metodo virtual void describir() = 0; para volverlo una clase abstracta. 
-
-
 # Codigo y su funcionalidad 
 El programa contiene:
 
-una persona que va a heredar a mecanico y cliente, y aqui es donde se aplica el polimorfismo, usando virtual en la funcion de describir(),
+una persona que va a heredar a mecanico y cliente, y aqui es donde se aplica el polimorfismo y clases abstractas, usando virtual en la funcion de describir()=0,
 
 un mecánico con su nombre, apellido, edad, experiencia,
 
@@ -51,6 +44,11 @@ En el uml en la parte izquierda, se observa como de persona se hereda a mecanico
 
 # Uso de .clear y .fail
 Use cin.fail y cin.clear para que cuando se ingrese un valor menor a 0 en los casos donde se pide un numero entero, se imprima que se ingrese un valor entero mayor a 0 y se vuelve a mostrar el menu para darle al usuario la opcion de volverlo a escribir. El .fail me va a funcionar para revisar si la entrada fallo y el .clear funciona para limpiar al cin, que va a seguir recibiendo datos despues de ser limpiado. En resumen, el .fail me va a decir si hubo un error (en este caso que el entero sea menor a 0) y el .clear es para borrar el dato que se habia guardado en el cin, y que pueda seguir recibiendo datos. El continue; es como decir que vuelva al inicio del ciclo ootra vez y no siga con las lineas de codigo de abajo. Esto lo hice para que haya menos casos donde el codigo pueda tronar.
+
+# Uso de destructores
+Ya que creamos objetos con new y les reservamos un espacio en el heap, y los destructores son para liberar la memoria que reservamos en este. 
+Destructor de clase taller: use un ciclo for que recorre el arreglo y se para cuando llegue al numero de personas (clietes o mecanicos) que se registro, al recorrer esta arreglo, por cada elemento que pasa, usa el delete para borrar la memoria del heap.
+Destructor Persona: A este se la anadio el virtual debido a sus clases hijas y por el polimorfismo. Es un destructor vacio que usa el virtual para que el destructor no solo busque en la clase tipo  Persona, sino tambien en cliente y mecanico. Si no se hiciera esto el destructor nomas borraria los atributos que le pertenecen a persona, y dejaria los extra que tienen cliente y mecanico en el heap, por lo que no se limpiaria bien. Se deja vacio el destructor porque c++ sabe como borrarlos por si solo, en taller si use delete porque use un apuntador.
 
 # Consideraciones
 
