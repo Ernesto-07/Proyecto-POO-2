@@ -1,7 +1,8 @@
 /*
  * Clase Mecanico
  * Hereda de Persona.
- * Representa un mecánico con experiencia y cantidad de servicios realizados.
+ * Representa un mecánico con experiencia y 
+ * cantidad de servicios realizados.
  */
 
 #ifndef MECANICO_H
@@ -92,11 +93,13 @@ void Mecanico :: setExperiencia(float exp) {
 }
 
 /**
- * void describir
- * no regresa nada 
- * @param
+ * Muestra el perfil completo del mecanico.
+ * Sobreescribe el metodo virtual de la clase Persona
+ * para mostrar la informacion general combinada con su 
+ * experiencia y los servicios realizados.
+ * * @param 
  * @return 
-*/      
+ */      
 void Mecanico :: describir (){
         cout << "\n     Mecanico: " << nombre << " " << apellido
              << " | Edad: " << edad
