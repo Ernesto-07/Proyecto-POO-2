@@ -28,7 +28,7 @@ public:
 
     float getCosto();
 
-    // Void porque no regresa ningun tipo, imprime para mostrar información del servicio
+    // Void porque no regresa ningun tipo, imprime para mostrar info del servicio
     void describir();
 
 };
