@@ -27,8 +27,11 @@ private:
     Servicio servicios[MAX]; // arreglo de servicios
     int totalServicios;     // contador de servicios registrados
 
-    Persona* listaPersonas[MAX_PERSONAS]; // 
-    int totalPersonas;
+    Persona* listaPersonas[MAX_PERSONAS]; // Arreglo de apuntadores 
+    // a la clase abstracta Persona.
+    // Almacena Clientes y Mecanicos.
+    int totalPersonas; // Contador para registrar
+    // el numero actual de personas en el arreglo.
 
 public:
 
@@ -140,7 +143,8 @@ void Taller :: describir(){
 
         cout << "\nPersonas registradas:" << endl;
         for (int i = 0; i < totalPersonas; i++) {
-            listaPersonas[i]->describir(); // Usar flechita (->) en lugar de punto (.)
+            listaPersonas[i]->describir(); 
+            // Usar flechita (->) en lugar de punto (.)
         }
     }
 
