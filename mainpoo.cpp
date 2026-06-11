@@ -2,7 +2,7 @@
  * Proyecto Taller Mecánico
  * Ernesto Alonso Beltran Acosta
  * A01710199
- * 05/12/2025
+ * 11/06/2026
  */
 
 /**
@@ -23,7 +23,7 @@
 #include "Mecanico.h" //clase Mecanico que hereda de Persona
 #include "Vehiculo.h" //clase Vehiculo
 #include "Servicio.h" //clase Servicio
-#include "Taller.h"   //clase Taller que contiene Vehiculos y Servicios
+#include "Taller.h"   //Contiene Vehiculos y Servicios
 
 using namespace std;
 
@@ -42,14 +42,12 @@ void menu() {
 int main() {
 
     //Se crea el objeto Taller y le pongo mi nombre
-    Taller t1("Taller Erni");
-
-    //Se define un mecánico fijo con datos ya establecidos
-    Mecanico mecanico1;  
+    Taller t1("Taller Erni"); 
 
     int opcion = 0; //control del menú, inicia en 0
 
-    //Ciclo para que el sistema siga corriendo mientras no elija la opción salir
+    //Ciclo para que el sistema siga corriendo 
+    //mientras no elija la opción salir
     //El rango válido de opciones es de 0 a 5
     while(opcion < 6 && opcion > -1) {
 
@@ -116,8 +114,16 @@ int main() {
                 cout << "Ingresa numero entero mayor a 0" << endl;
                 continue;
             }
-            Persona* nuevoCliente = new Cliente(nombre, apellido, edad, anosUso, cantidad);
+            // Crea un objeto Cliente en la memoria heap usando un 
+            // apuntador de la clase padre Persona 
+            Persona* nuevoCliente = new Cliente(
+                nombre, apellido, edad, anosUso, cantidad
+            );
+            // Guarda el apuntador del cliente en el arreglo del 
+            // taller
             t1.agregarPersona(nuevoCliente);
+            // Ejecuta el metodo describir de Cliente  
+            // gracias al virtual de Persona
             nuevoCliente->describir();
         }
         else if(opcion == 5) {
@@ -143,7 +149,8 @@ int main() {
                 cout << "Ingresa numero entero mayor a 0" << endl;
                 continue;
             }
-            cout << "Ingrese cantidad de servicios realizados (Dato entero): ";
+            cout << "Ingrese cantidad de servicios realizados"
+                 << "(Dato entero): ";
             cin >> cantidad;
             if(cin.fail() || cantidad < 0){
                 cin.clear();
@@ -151,8 +158,16 @@ int main() {
                 continue;
             }
 
-            Persona* nuevoMecanico = new Mecanico(nombre, apellido, edad, experiencia, cantidad);
+            // Crea un objeto Mecanico en la memoria heap usando un 
+            // apuntador de la clase padre Persona
+            Persona* nuevoMecanico = new Mecanico(
+                nombre, apellido, edad, experiencia, cantidad
+            );
+            // Guarda el apuntador del mecánico en el arreglo del 
+            // taller
             t1.agregarPersona(nuevoMecanico);
+            // Ejecuta el metodo describir de Mecanico  
+            // gracias al virtual de Persona
             nuevoMecanico->describir();
             }
         else if(opcion == 0) {
