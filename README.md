@@ -68,3 +68,13 @@ Está hecho en C++ normal.
 Al usuario poner un dato diferente al pedido en las opciones del menu lo sacara inmediatamente del programa.
 
 1. Si el usuario escribe un tipo de dato no esperado (por ejemplo en edad o costo), simplemente sacara al usuario del programa.
+
+# Correcciones
+
+Se hace correcciones al diagrama de clases, al igual que se anaden complementos, que pertenece a la sub-competencia de Evalúa los componentes que integran una problemática SICT0301A, el diagrama de clases puedes ser observado desde este repositorio.
+
+Se implementa de manera correcta el polimorfismo de manera clara y limpia,  que pertenece a la sub-competencia de Implementa acciones científicas SICT0303A.
+
+Sigo estándares en todo mi código fuente: estilo, sangrías, comentarios, nombres, etc..., que pertenece a la sub-competencia de SICT0303A. Se agregaron comentarios en todo el codigo que especifican y explican los parametros y lo que se regresa. Tambien se cuido lo de limite de caracteres y las sangrias.
+
+Cumplo con estándares en mi repositorio: tiene un readme claro que explica el proyecto (para que sirve, para que no sirve y como se usa), no tiene archivos basura o versiones pasadas, que pertenece a la sub-competencia de SICT0303A. Se modifico el ReadMe para ser mucho mas claro y dejar en claro el contexto del proyecto y su funcionalidad, al igual de que como funciona y que hacer y no hacer.
