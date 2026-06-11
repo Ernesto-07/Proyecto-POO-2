@@ -38,7 +38,7 @@ El menu tiene 6 opciones a considerar:
 5. Opcion de agregar al mecanico que dara el servicio.
 
 # UML 
-[UML](./UML2..png)
+[UML](./UML2.png)
 
 
 # UML y su relacion al problema 
