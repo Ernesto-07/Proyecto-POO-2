@@ -24,7 +24,8 @@ public:
     // Constructor con parametros: inicializa con valores dados
     Persona(string n, string a, float e);
 
-    //Creo un destructor virtual para asegurar que se llame al destructor correcto de las subclases
+    //Creo un destructor virtual para asegurar que se
+    //llame al destructor correcto de las clases hijas
     virtual ~Persona();
 
     // Getters para acceder a los atributos
@@ -34,8 +35,10 @@ public:
 
     float getEdad();
 
-    // Método común para mostrar información de la persona
+    // Método virtual para mostrar información de la persona
     virtual void describir() = 0;
+    // El =0 lo vuelve un metodo puro, lo que hace que 
+    //Persona sea una clase abstracta
 };
 
 
