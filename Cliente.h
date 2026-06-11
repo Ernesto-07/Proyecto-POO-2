@@ -1,7 +1,8 @@
 /*
  * Clase Cliente
  * Hereda de Persona.
- * Representa un cliente del taller con años de uso y cantidad de servicios realizados.
+ * Representa un cliente del taller con años de uso y 
+ * cantidad de servicios realizados.
  */
 
 #ifndef CLIENTE_H
@@ -93,11 +94,13 @@ float Cliente :: getCantidad(){
 
 
 /**
- * void describir
- * no regresa nada 
- * @param
+ * Muestra el perfil completo del cliente.
+ * Sobreescribe el metodo virtual de la clase Persona 
+ * para mostrar los datos generales junto con el historial 
+ * especifico del cliente (anos de uso del auto y servicios).
+ * * @param 
  * @return 
-*/      
+ */ 
 void Cliente :: describir(){
         cout << "\n     Cliente: " << nombre << " " << apellido << endl;
             if(edad>0){
@@ -108,7 +111,8 @@ void Cliente :: describir(){
             }
              
             if(anosUso > 0){
-                cout << "       | Anos de uso: " << anosUso << endl; //años(se puso anos por impresion)
+                cout << "       | Anos de uso: " << anosUso << endl; 
+                //años(se puso anos por impresion)
             }
             else{
                 cout << "Numero no valido" << endl;
