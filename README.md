@@ -47,7 +47,9 @@ Use cin.fail y cin.clear para que cuando se ingrese un valor menor a 0 en los ca
 
 # Uso de destructores
 Ya que creamos objetos con new y les reservamos un espacio en el heap, y los destructores son para liberar la memoria que reservamos en este. 
+
 Destructor de clase taller: use un ciclo for que recorre el arreglo y se para cuando llegue al numero de personas (clietes o mecanicos) que se registro, al recorrer esta arreglo, por cada elemento que pasa, usa el delete para borrar la memoria del heap.
+
 Destructor Persona: A este se la anadio el virtual debido a sus clases hijas y por el polimorfismo. Es un destructor vacio que usa el virtual para que el destructor no solo busque en la clase tipo  Persona, sino tambien en cliente y mecanico. Si no se hiciera esto el destructor nomas borraria los atributos que le pertenecen a persona, y dejaria los extra que tienen cliente y mecanico en el heap, por lo que no se limpiaria bien. Se deja vacio el destructor porque c++ sabe como borrarlos por si solo, en taller si use delete porque use un apuntador.
 
 # Consideraciones
