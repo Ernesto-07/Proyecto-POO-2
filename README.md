@@ -37,6 +37,10 @@ El menu tiene 6 opciones a considerar:
 
 5. Opcion de agregar al mecanico que dara el servicio.
 
+# UML 
+[UML](./UML2..png)
+
+
 # UML y su relacion al problema 
 Se sube un archivo png con la imagen del UML que disene, que involucre un numero de clases que el profesor pide. 
 En este UML de clases se observa como inclui herencia, usando protected en los atributos. Tambien se incluye composicion dentro de este diagrama, lo que lo hace un diagrama completo. Se incluye agregacion tambien entre taller y persona, agregando personas al taller.
